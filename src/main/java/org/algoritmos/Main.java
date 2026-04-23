@@ -100,7 +100,7 @@ public class Main {
         System.out.println("\n==========================================");
         System.out.println("  Logs en:       datos/logs/");
         System.out.println("  Resultados en: datos/resultados/");
-        System.out.println("  ¡Hasta luego!");
+        System.out.println("  Nota mental: si funciona, déjalo así :)");
         System.out.println("==========================================");
         scanner.close();
     }
