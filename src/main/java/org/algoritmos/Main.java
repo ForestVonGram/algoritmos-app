@@ -5,9 +5,7 @@ import org.algoritmos.naiveonarray.NaivOnArray;
 import org.algoritmos.naivloopunrollingtwo.NaivLoopUnrollingTwo;
 import org.algoritmos.naivloopunrollingfour.NaivLoopUnrollingFour;
 import org.algoritmos.winogradoriginal.WinogradOriginal;
-// import org.algoritmos.winogradscaled.WinogradScaled;
-// import org.algoritmos.strassennaiv.StrassenNaiv;
-// import org.algoritmos.strassenwinograd.StrassenWinograd;
+import org.algoritmos.winogradscaled.WinogradScaled;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -28,7 +26,7 @@ public class Main {
         ALGORITHMS.put("NaivLoopUnrollingTwo",  NaivLoopUnrollingTwo::run);
         ALGORITHMS.put("NaivLoopUnrollingFour", NaivLoopUnrollingFour::run);
         ALGORITHMS.put("WinogradOriginal",       WinogradOriginal::run);
-        // ALGORITHMS.put("WinogradScaled",          WinogradScaled::run);
+        ALGORITHMS.put("WinogradScaled",          WinogradScaled::run);
     }
 
     @FunctionalInterface
