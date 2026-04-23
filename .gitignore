@@ -41,3 +41,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Matrices y resultados generados ###
+datos/matrices/
+datos/resultados/
+datos/logs/
