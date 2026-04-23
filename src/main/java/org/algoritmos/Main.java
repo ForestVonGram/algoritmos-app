@@ -4,7 +4,7 @@ import org.algoritmos.MatrixGenerator;
 import org.algoritmos.naiveonarray.NaivOnArray;
 import org.algoritmos.naivloopunrollingtwo.NaivLoopUnrollingTwo;
 import org.algoritmos.naivloopunrollingfour.NaivLoopUnrollingFour;
-// import org.algoritmos.winogradoriginal.WinogradOriginal;
+import org.algoritmos.winogradoriginal.WinogradOriginal;
 // import org.algoritmos.winogradscaled.WinogradScaled;
 // import org.algoritmos.strassennaiv.StrassenNaiv;
 // import org.algoritmos.strassenwinograd.StrassenWinograd;
@@ -27,10 +27,8 @@ public class Main {
         ALGORITHMS.put("NaivOnArray",          NaivOnArray::run);
         ALGORITHMS.put("NaivLoopUnrollingTwo",  NaivLoopUnrollingTwo::run);
         ALGORITHMS.put("NaivLoopUnrollingFour", NaivLoopUnrollingFour::run);
-        // ALGORITHMS.put("WinogradOriginal",       WinogradOriginal::run);
+        ALGORITHMS.put("WinogradOriginal",       WinogradOriginal::run);
         // ALGORITHMS.put("WinogradScaled",          WinogradScaled::run);
-        // ALGORITHMS.put("StrassenNaiv",            StrassenNaiv::run);
-        // ALGORITHMS.put("StrassenWinograd",        StrassenWinograd::run);
     }
 
     @FunctionalInterface
