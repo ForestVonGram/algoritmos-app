@@ -67,10 +67,17 @@ public class MatrixGenerator {
     public static long[][] load(String path) throws IOException {
         try (BufferedReader br = new BufferedReader(
                 new InputStreamReader(new FileInputStream(path)))) {
-            int n = Integer.parseInt(br.readLine().trim());
+            String firstLine = br.readLine();
+            if (firstLine == null)
+                throw new IOException("Archivo vacío o corrupto: " + path);
+            int n = Integer.parseInt(firstLine.trim());
             long[][] M = new long[n][n];
             for (int i = 0; i < n; i++) {
-                String[] parts = br.readLine().trim().split(" ");
+                String line = br.readLine();
+                if (line == null)
+                    throw new IOException("Archivo truncado en fila " + i + ": " + path +
+                            "\nElimina el archivo y vuelve a generar las matrices.");
+                String[] parts = line.trim().split(" ");
                 for (int j = 0; j < n; j++)
                     M[i][j] = Long.parseLong(parts[j]);
             }
@@ -79,14 +86,19 @@ public class MatrixGenerator {
     }
 
     // -----------------------------------------------------------------------
-    // Verificar si ya existen todas las matrices en disco
+    // Verificar si ya existen todas las matrices en disco (y no están vacías)
     // -----------------------------------------------------------------------
     public static boolean allExist() {
         for (int c = 1; c <= NUM_CASES; c++)
-            for (int n : SIZES)
-                if (!Files.exists(Paths.get(pathA(c, n))) ||
-                        !Files.exists(Paths.get(pathB(c, n))))
+            for (int n : SIZES) {
+                java.io.File fA = new java.io.File(pathA(c, n));
+                java.io.File fB = new java.io.File(pathB(c, n));
+                // Tamaño mínimo esperado: n*n * 7 bytes aprox (números de 6 dígitos + espacio)
+                long minSize = (long) n * n * 6;
+                if (!fA.exists() || fA.length() < minSize ||
+                    !fB.exists() || fB.length() < minSize)
                     return false;
+            }
         return true;
     }
 
