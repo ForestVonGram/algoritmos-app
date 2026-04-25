@@ -11,11 +11,11 @@ import org.algoritmos.winogradscaled.WinogradScaled;
 // import org.algoritmos.threesequentialblock.ThreeSequentialBlock;
 // import org.algoritmos.threeparallelblock.ThreeParallelBlock;
 // import org.algoritmos.threeenhancedparallelblock.ThreeEnhancedParallelBlock;
-// import org.algoritmos.foursequentialblock.FourSequentialBlock;
-// import org.algoritmos.fourparallelblock.FourParallelBlock;
-// import org.algoritmos.fourenhancedparallelblock.FourEnhancedParallelBlock;
-// import org.algoritmos.fivesequentialblock.FiveSequentialBlock;
-// import org.algoritmos.fiveparallelblock.FiveParallelBlock;
+import org.algoritmos.foursequentialblock.FourSequentialBlock;
+import org.algoritmos.fourparallelblock.FourParallelBlock;
+import org.algoritmos.fourenhancedparallelblock.FourEnhancedParallelBlock;
+import org.algoritmos.fivesequentialblock.FiveSequentialBlock;
+import org.algoritmos.fiveparallelblock.FiveParallelBlock;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -42,11 +42,11 @@ public class Main {
         // ALGORITHMS.put("ThreeSequentialBlock",  ThreeSequentialBlock::run);
         // ALGORITHMS.put("ThreeParallelBlock",    ThreeParallelBlock::run);
         // ALGORITHMS.put("ThreeEnhancedParallelBlock", ThreeEnhancedParallelBlock::run);
-        // ALGORITHMS.put("FourSequentialBlock",   FourSequentialBlock::run);
-        // ALGORITHMS.put("FourParallelBlock",     FourParallelBlock::run);
-        // ALGORITHMS.put("FourEnhancedParallelBlock", FourEnhancedParallelBlock::run);
-        // ALGORITHMS.put("FiveSequentialBlock",   FiveSequentialBlock::run);
-        // ALGORITHMS.put("FiveParallelBlock",     FiveParallelBlock::run);
+        ALGORITHMS.put("FourSequentialBlock",   FourSequentialBlock::run);
+        ALGORITHMS.put("FourParallelBlock",     FourParallelBlock::run);
+        ALGORITHMS.put("FourEnhancedParallelBlock", FourEnhancedParallelBlock::run);
+        ALGORITHMS.put("FiveSequentialBlock",   FiveSequentialBlock::run);
+        ALGORITHMS.put("FiveParallelBlock",     FiveParallelBlock::run);
     }
 
     @FunctionalInterface
