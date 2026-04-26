@@ -239,8 +239,9 @@ public class TimingPanel extends JPanel {
                     try {
                         int nVal = Integer.parseInt(
                                 line.split("n=")[1].split(" ")[0].split("\\|")[0].trim());
+                        // Reemplazar coma por punto para manejar locale español
                         double te = Double.parseDouble(
-                                line.split("TE=")[1].split(" ")[0].trim());
+                                line.split("TE=")[1].split(" ")[0].trim().replace(",", "."));
                         if (times.containsKey(nVal)) times.get(nVal).add(te);
                     } catch (Exception ignored) {}
                 }

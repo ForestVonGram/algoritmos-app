@@ -10,6 +10,9 @@ import javax.swing.plaf.metal.OceanTheme;
 public class MatrixApp {
 
     public static void main(String[] args) {
+        // Forzar locale inglés para que los decimales usen punto en todos los logs
+        java.util.Locale.setDefault(java.util.Locale.US);
+
         // Usar Metal L&F con tema Ocean — más controlable que el L&F del sistema
         try {
             MetalLookAndFeel.setCurrentTheme(new OceanTheme());
